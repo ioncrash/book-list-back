@@ -42,6 +42,14 @@ class BooksController < ApplicationController
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
+    current_rank = @book.rank
+    Book.all.each do |book|
+      if book.rank > current_rank
+        book.rank -= 1
+        puts "adjusting book.title"
+        book.save!
+      end
+    end
     @book.destroy
 
     head :no_content
