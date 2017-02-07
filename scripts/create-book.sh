@@ -6,9 +6,9 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --data '{
     "book": {
-      "title": "The Martian Chronicles",
-      "author": "Ray Bradbury",
-      "rank": "1.5"
+      "title": "CosmiComics",
+      "author": "Italo Calvino",
+      "rank": "1"
     }
   }'
 
